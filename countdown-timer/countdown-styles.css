@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "Akrobat-Light";
+	src: url("../fonts/Akrobat-Light.eot");
+	src: url("../fonts/Akrobat-Light.eot??#iefix") format("embedded-opentype"),
+		url("../fonts/Akrobat-Light.woff2") format("woff2"),
+		url("../fonts/Akrobat-Light.woff") format("woff"),
+		url("../fonts/Akrobat-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Akrobat-Regular";
+	src: url("../fonts/Akrobat-Regular.eot");
+	src: url("../fonts/Akrobat-Regular.eot") format("embedded-opentype"),
+		url("../fonts/Akrobat-Regular.woff2") format("woff2"),
+		url("../fonts/Akrobat-Regular.woff") format("woff"),
+		url("../fonts/Akrobat-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Akrobat-SemiBold";
+	src: url("../fonts/Akrobat-SemiBold.eot");
+	src: url("../fonts/Akrobat-SemiBold.eot") format("embedded-opentype"),
+		url("../fonts/Akrobat-SemiBold.woff2") format("woff2"),
+		url("../fonts/Akrobat-SemiBold.woff") format("woff"),
+		url("../fonts/Akrobat-SemiBold.ttf") format("truetype");
+}
+
+/* general styling */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	justify-content: center;
+	background-color: #28282a;
+	display: flex;
+	font-family: "Akrobat-Regular", "Segoe UI", "Helvetica Neue", sans-serif;
+	font-size: 18px;
+}
+
+.container {
+	color: #ffffff;
+	margin: 0 auto;
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	font-size: 1.5em;
+	list-style-type: none;
+	padding: 1em;
+	text-transform: uppercase;
+}
+
+li span {
+	display: block;
+	font-size: 4.5rem;
+}
+
+.message {
+	font-size: 4rem;
+}
+
+#content {
+	display: none;
+	padding: 1rem;
+}
+
+.launchday {
+	padding: 0 0.25rem;
+}
+
+@media all and (max-width: 800px) {
+	li {
+		font-size: 1.125rem;
+		padding: 0.75rem;
+	}
+
+	li span {
+		font-size: 3.375rem;
+	}
+}
