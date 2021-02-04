@@ -11,16 +11,16 @@
           let now = new Date().getTime(),
               distance = countDown - now;
   
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
-            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+          document.querySelector("#days").innerText = Math.floor(distance / (day)) ,
+            document.querySelector("#hours").innerText = Math.floor((distance % (day)) / (hour)),
+            document.querySelector("#minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+            document.querySelector("#seconds").innerText = Math.floor((distance % (minute)) / second);
   
           //do something when date is reached
           if (distance < 0) {
-            let headline = document.getElementById("headline"),
-                countdown = document.getElementById("countdown"),
-                content = document.getElementById("content");
+            let headline = document.querySelector("#headline"),
+                countdown = document.querySelector("#countdown"),
+                content = document.querySelector("#content");
   
             headline.innerText = "It's time!";
             countdown.style.display = "none";
