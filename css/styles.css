@@ -34,9 +34,7 @@
 
 html {
 	height: 100%;
-	background: url(/images/hexagonal-background_w400xh3189.jpg) no-repeat center
-		fixed;
-	background-size: cover;
+	min-height: 100%;
 }
 html,
 body {
@@ -132,7 +130,9 @@ button:active {
 }
 
 body {
-	background: rgb(255, 255, 255, 0.6);
+	min-height: 100%;
+	width: 100%;
+	background: rgb(255, 255, 255, 0.4);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -251,7 +251,7 @@ div.col-3.newsalert-sign-up-block {
 
 .video-block-container {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .jwst-intro-video {
@@ -305,12 +305,14 @@ div.col-3.newsalert-sign-up-block {
 .api-gallery-homepage,
 .link-block-container {
 	width: 100%;
+	min-height: 100%;
 	margin: 3rem auto;
 	padding: 0 1rem;
 }
 
 .api-results-container-homepage {
 	margin: 2rem auto 4rem;
+	min-height: 100%;
 	display: flex;
 	flex-flow: column nowrap;
 }
