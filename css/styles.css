@@ -577,10 +577,10 @@ a.link-block-link:active {
 /*------------------------- footer styles --------------------*/
 
 footer {
-	background: url(/images/hexagonal-footer-banner-background_w768xh500.jpg)
+	background: url(/images/hexagonal-footer-banner-background_w500xh520.jpg)
 		no-repeat center;
 	width: 100%;
-	min-height: 500px;
+	min-height: 520px;
 	padding: 2rem 2rem 0.5rem;
 	text-align: center;
 }
@@ -683,6 +683,31 @@ footer {
 		margin: 0 0.5rem;
 		min-width: 300px;
 	}
+	footer {
+		background: url(/images/hexagonal-footer-banner-background_w800xh400.jpg)
+			no-repeat center;
+		width: 100%;
+		min-height: 400px;
+	}
+
+	.footer-flexbox {
+		width: 90%;
+	}
+	.col-copyright {
+		margin-top: 1.5rem;
+	}
+	.col-copyright p {
+		font-size: 0.7rem;
+		margin-top: 1rem;
+	}
+
+	.back-to-top {
+		margin: 0 auto 2rem;
+	}
+
+	.back-to-top h4 {
+		font-size: 1.1rem;
+	}
 }
 @media all and (min-width: 680px) {
 	header {
@@ -694,26 +719,24 @@ footer {
 		align-items: center;
 	}
 	footer {
-		background: url(/images/hexagonal-footer-banner-background_w1000xh500.jpg)
+		background: url(/images/hexagonal-footer-banner-background_w1000xh300.jpg)
 			no-repeat center;
 		width: 100%;
-		min-height: 500px;
-		display: flex;
-		flex-direction: column;
-		position: relative;
+		min-height: 300px;
 	}
 	.footer-flexbox {
 		display: flex;
 		flex-flow: row-reverse;
 		justify-content: space-between;
 		align-content: flex-end;
-		margin-top: 3rem;
-		position: absolute;
-		bottom: 1rem;
+		margin: 2rem auto 0;
 	}
 	.col-copyright {
-		width: 55%;
+		width: 50%;
 		margin: 1rem 0 0;
+	}
+	.col-copyright p {
+		font-size: 0.8rem;
 	}
 
 	footer.newsalert-sign-up-form {
@@ -782,14 +805,16 @@ footer {
 		font-size: 3.2rem;
 	}
 
+	footer {
+		padding: 1rem 2rem;
+	}
 	.footer-flexbox {
 		width: 90%;
-		justify-content: center;
+		justify-content: space-between;
+		margin: 0 auto;
 	}
 	.col-copyright {
-		width: 65%;
-		margin-top: 2.5rem;
-		margin-right: 2rem;
+		margin: 2rem 0 0;
 	}
 }
 @media all and (min-width: 1000px) {
@@ -799,15 +824,17 @@ footer {
 		min-height: 244px;
 	}
 	footer {
-		background: url(/images/hexagonal-footer-banner-background_w1520xh500.jpg)
+		background: url(/images/hexagonal-footer-banner-background_w1920xh300.jpg)
 			no-repeat center;
 	}
 	.footer-flexbox {
-		bottom: 3rem;
+		align-content: flex-end;
+		padding-top: 2rem;
 	}
 	.col-copyright {
 		width: 70%;
-		margin-top: 4rem;
+		margin-top: 2rem;
+		font-size: 0.9rem;
 	}
 
 	#countdown li {
@@ -846,6 +873,10 @@ footer {
 		font-size: 7rem;
 	}
 	.footer-flexbox {
-		bottom: 5rem;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.col-copyright p {
+		font-size: 1rem;
 	}
 }
