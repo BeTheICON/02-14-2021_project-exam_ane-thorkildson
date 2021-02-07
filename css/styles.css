@@ -55,7 +55,8 @@ h6 {
 	color: #132a7e;
 }
 h1,
-h3 {
+h3,
+h6 {
 	font-size: 2rem;
 }
 
@@ -71,8 +72,7 @@ h2 {
 h2 span {
 	text-transform: none;
 }
-h5,
-h6 {
+h5 {
 	font-size: 1.2rem;
 	font-family: "Akrobat-Light", "Segoe UI", "Helvetica Neue", sans-serif;
 }
@@ -118,6 +118,31 @@ button {
 	margin: 0.8rem auto 0;
 	padding: 0.8rem 2rem;
 }
+.load-more-button {
+	background: url(/images/button\ blue\ 240x44.svg) no-repeat center;
+	width: 320px;
+	height: 44px;
+	color: #fff;
+	margin: 1rem auto 2rem;
+	padding: 1.5rem 4rem 3rem;
+}
+.load-more-button:hover {
+	background: url(/images/button\ gold\ 240x44.svg) no-repeat center;
+	width: 400px;
+	min-height: 44px;
+	padding: 1.5rem 4rem 3rem;
+	color: rgba(40, 40, 42, 1);
+	text-decoration: underline;
+}
+
+.load-more-button:active {
+	color: #fff;
+	text-decoration-color: #fff;
+}
+.load-more-button:disabled {
+	display: none;
+}
+
 .view-more-button:hover {
 	background: url(/images/button\ white\ 140x44.svg) no-repeat center;
 	color: #28282a;
@@ -207,6 +232,24 @@ div.col-3.newsalert-sign-up-block {
 	align-items: center;
 	text-align: center;
 	margin: 1.5rem auto 0;
+}
+
+.errorMessage {
+	border: 4px ridge rgb(233, 4, 4);
+	padding: 1.5rem;
+	margin: 2rem auto;
+	max-width: 600px;
+	color: rgb(187, 3, 3);
+	background: rgb(187, 3, 3, 0.2);
+}
+
+.successMessage {
+	border: 4px ridge rgb(0, 185, 0);
+	padding: 1.5rem;
+	margin: 2rem auto;
+	max-width: 600px;
+	color: rgba(15, 128, 15);
+	background: rgba(15, 128, 15, 0.2);
 }
 
 /*------- Countdown Timer Styles --------*/
@@ -303,7 +346,8 @@ div.col-3.newsalert-sign-up-block {
 	margin: auto;
 }
 
-.api-results-container-homepage {
+.api-results-container-homepage,
+.api-results-container {
 	margin: 2rem auto 4rem;
 	min-height: 100%;
 	display: flex;
@@ -344,6 +388,7 @@ li.api-list-item-homepage {
 
 .text-block-container,
 .api-gallery-homepage,
+.api-gallery,
 .link-block-container {
 	width: 100%;
 	margin: 3rem auto;
@@ -617,9 +662,24 @@ footer {
 
 /*___________________________ end footer styles _______________*/
 
+/*----------------- JWST Gallery Styles -----------------------*/
+
+.jwst-image {
+	background: url(/images/header-image-webb_400x107.jpg) no-repeat center;
+	min-height: 107px;
+	width: 100%;
+}
+
+.api-gallery {
+	text-align: center;
+}
+
 /*--------- @media - styles --------*/
 
 @media all and (max-width: 280px) {
+	h2 {
+		font-size: 2rem;
+	}
 	#countdown li {
 		font-size: 0.8rem;
 		padding: 0 0.2rem 0.8rem;
@@ -649,6 +709,10 @@ footer {
 	}
 }
 @media all and (min-width: 400px) {
+	.jwst-image {
+		background: url(/images/header-image-webb_600x161.jpg) no-repeat center;
+		min-height: 161px;
+	}
 	#countdown li {
 		font-size: 0.8rem;
 		padding: 0 0.5rem;
@@ -662,11 +726,16 @@ footer {
 	}
 	.text-block-container,
 	.api-gallery-homepage,
+	.api-gallery,
 	.link-block-container {
 		width: 90%;
 	}
 }
 @media all and (min-width: 500px) {
+	.jwst-image {
+		background: url(/images/header-image-webb_800x214.jpg) no-repeat center;
+		min-height: 214px;
+	}
 	#countdown li {
 		font-size: 1rem;
 		padding: 0 1rem;
@@ -676,13 +745,16 @@ footer {
 		font-size: 4rem;
 		text-shadow: 2px 2px 4px rgba(109, 109, 109, 1);
 	}
-	.api-results-container-homepage {
+	.api-results-container-homepage,
+	.api-results-container {
 		flex-flow: row wrap;
 	}
-	.api-results-container-homepage ul {
+	.api-results-container-homepage ul,
+	.api-results-container ul {
 		margin: 0 0.5rem;
 		min-width: 300px;
 	}
+
 	footer {
 		background: url(/images/hexagonal-footer-banner-background_w800xh400.jpg)
 			no-repeat center;
@@ -772,6 +844,7 @@ footer {
 	}
 	.text-block-container,
 	.api-gallery-homepage,
+	.api-gallery,
 	.link-block-container {
 		width: 85%;
 	}
@@ -788,6 +861,12 @@ footer {
 			center fixed;
 		background-size: cover;
 	}
+
+	.jwst-image {
+		background: url(/images/header-image-webb_1000x268.jpg) no-repeat center;
+		min-height: 268px;
+	}
+
 	#countdown li {
 		font-size: 1.6rem;
 		padding: 0 2rem;
@@ -818,6 +897,11 @@ footer {
 	}
 }
 @media all and (min-width: 1000px) {
+	.jwst-image {
+		background: url(/images/header-image-webb_1200x321.jpg) no-repeat center;
+		min-height: 321px;
+	}
+
 	header {
 		background: url(/images/hexagonal-header-banner-background_w1920xh244.jpg)
 			no-repeat center;
@@ -863,6 +947,10 @@ footer {
 	}
 }
 @media all and (min-width: 1200px) {
+	.jwst-image {
+		background: url(/images/header-image-webb_1520x407.jpg) no-repeat center;
+		min-height: 407px;
+	}
 	#countdown li {
 		font-size: 1.8rem;
 		padding: 0 2rem 2rem;
