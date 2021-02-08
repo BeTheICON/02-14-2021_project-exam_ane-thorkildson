@@ -34,7 +34,10 @@
 
 html {
 	height: 100%;
-	min-height: 100%;
+	background-image: url(/images/hexagonal-background_w400xh3189.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 html,
 body {
@@ -55,9 +58,11 @@ h6 {
 	color: #132a7e;
 }
 h1,
-h3,
-h6 {
+h3 {
 	font-size: 2rem;
+}
+h6 {
+	font-size: 1.4rem;
 }
 
 h2,
@@ -158,9 +163,6 @@ button:active {
 }
 
 body {
-	min-height: 100%;
-	width: 100%;
-	background: rgb(255, 255, 255, 0.4);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -185,7 +187,7 @@ form.newsalert-sign-up-form {
 }
 
 .form-note {
-	color: #fce09d;
+	color: rgb(252, 224, 157);
 	font-size: 0.8rem;
 }
 .form-error {
@@ -212,15 +214,24 @@ input:focus {
 	width: 180px;
 }
 .col-logo {
-	width: 100%;
-	justify-self: left;
+	width: 95%;
 	align-self: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.col-logo-image-wrap {
+	width: 60%;
+}
+.col-logo-menu-wrap {
+	width: 30%;
+	height: auto;
 }
 
 .col-heading {
 	text-align: center;
 	align-self: center;
-	justify-self: center;
 	width: 90%;
 }
 
@@ -251,6 +262,147 @@ div.col-3.newsalert-sign-up-block {
 	color: rgba(15, 128, 15);
 	background: rgba(15, 128, 15, 0.2);
 }
+
+/*------------------- Menu Menu Styles -------------------*/
+
+.main-nav {
+	display: none;
+}
+
+#sidebarMenu {
+	height: 40%;
+	position: absolute;
+	right: 0;
+	width: 200px;
+	margin-top: 4rem;
+	transform: translateX(250px);
+	transition: transform 250ms ease-in-out;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 40%,
+		rgba(252, 224, 157, 1) 60%
+	);
+}
+
+.sidebarMenuInner {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid rgba(40, 40, 42, 0.1);
+}
+
+.sidebarMenuInner li {
+	list-style: none;
+	color: rgba(255, 255, 255, 1);
+	padding: 1rem;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(252, 252, 252, 0.5);
+}
+
+.sidebarMenuInner li a {
+	color: rgba(252, 252, 252, 1);
+	cursor: pointer;
+	text-decoration: none;
+}
+.sidebarMenuInner li a:hover {
+	text-decoration: underline;
+	color: rgba(252, 224, 157, 1);
+}
+.sidebarMenuInner li a:active {
+	text-decoration: underline;
+	color: rgba(252, 252, 252, 1);
+}
+
+.sidebarMenuInner li:hover {
+	text-decoration: none;
+	border-bottom: 2px solid rgba(252, 252, 252, 1);
+	border-top: 1px solid rgba(252, 252, 252, 1);
+}
+.sidebarMenuInner li:active {
+	border: 2px solid rgba(252, 252, 252, 1);
+}
+
+.headerHamburgerMenu {
+	display: contents;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+	transform: translateX(0);
+}
+
+input[type="checkbox"] {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	display: none;
+}
+
+.sidebarIconToggle {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: absolute;
+	z-index: 99;
+	top: 2rem;
+	right: 2rem;
+	height: 44px;
+	width: 44px;
+	display: inline-block;
+}
+
+.spinner {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.horizontal {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	position: relative;
+	float: right;
+	margin: 0.4rem 0;
+	padding: 2px;
+}
+
+.diagonal.part-1 {
+	position: relative;
+	transition: all 0.3s;
+	box-sizing: border-box;
+	float: right;
+	padding: 2px;
+}
+
+.diagonal.part-2 {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	position: relative;
+	float: right;
+	padding: 2px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	transform: rotate(135deg);
+	margin-top: 4px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+	transition: all 0.3s;
+	box-sizing: border-box;
+	transform: rotate(-135deg);
+	margin-top: -20px;
+}
+
+/*___________________End Hamburger Menu Styles ________________*/
 
 /*------- Countdown Timer Styles --------*/
 
@@ -673,6 +825,34 @@ footer {
 .api-gallery {
 	text-align: center;
 }
+/*___________________________ end JWST Gallery styles _______________*/
+
+/*----------------- Contact us - Styles -----------------------*/
+
+.contact-page-background-image {
+	height: 1014px;
+	width: 100%;
+	background-image: url(/images/contact-us_background-image_1920x1014.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	margin: 3rem auto 12rem;
+	border-top: 0.5rem ridge rgba(40, 40, 42, 1);
+	border-bottom: 0.5rem ridge rgba(40, 40, 42, 1);
+}
+
+.contact-us-header-text {
+	width: 80%;
+	text-align: center;
+	margin: 3rem auto 0;
+	color: rgba(40, 40, 42, 1);
+}
+.contact-us-header-text span {
+	text-shadow: 1px 1px 2px rgba(252, 224, 157, 0.1);
+}
+
+/*___________________________ end Contact us - styles _______________*/
 
 /*--------- @media - styles --------*/
 
@@ -709,6 +889,14 @@ footer {
 	}
 }
 @media all and (min-width: 400px) {
+	html {
+		height: 100%;
+		background-image: url(/images/hexagonal-background_w800xh3189.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
 	.jwst-image {
 		background: url(/images/header-image-webb_600x161.jpg) no-repeat center;
 		min-height: 161px;
@@ -785,10 +973,39 @@ footer {
 	header {
 		background: url(/images/hexagonal-header-banner-background_mobile_w1000xh300.jpg)
 			no-repeat center;
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
 		min-height: 300px;
 		justify-content: space-around;
 		align-items: center;
+	}
+	.nav-container {
+		width: 100%;
+		background: rgba(0, 0, 0, 1);
+		padding: 0 0 0.3rem 1rem;
+	}
+
+	ul.main-nav {
+		list-style: none;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: flex-start;
+	}
+	.main-nav li {
+		margin-right: 1.5rem;
+	}
+	.main-nav li a {
+		color: rgba(252, 252, 252, 1);
+	}
+	.main-nav li a:hover {
+		color: rgba(252, 224, 157, 1);
+		text-decoration: none;
+	}
+	.main-nav li a:active {
+		text-decoration: underline;
+	}
+	.main-nav li a.current-page {
+		color: rgba(252, 224, 157, 1);
 	}
 	footer {
 		background: url(/images/hexagonal-footer-banner-background_w1000xh300.jpg)
@@ -803,16 +1020,16 @@ footer {
 		align-content: flex-end;
 		margin: 2rem auto 0;
 	}
+
+	footer.newsalert-sign-up-form {
+		max-width: 30%;
+	}
 	.col-copyright {
 		width: 50%;
 		margin: 1rem 0 0;
 	}
 	.col-copyright p {
 		font-size: 0.8rem;
-	}
-
-	footer.newsalert-sign-up-form {
-		max-width: 30%;
 	}
 
 	.col-3 {
@@ -836,9 +1053,7 @@ footer {
 	#countdown li span {
 		font-size: 4.5rem;
 	}
-	.col-logo {
-		margin-left: 1rem;
-	}
+
 	.countdown-block-container {
 		min-height: 150px;
 	}
@@ -848,18 +1063,31 @@ footer {
 	.link-block-container {
 		width: 85%;
 	}
+	.link-block-container {
+		text-align: center;
+	}
 	.link-flexbox-wrap {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
 		margin-top: 2rem;
 	}
+
+	.headerHamburgerMenu {
+		display: none;
+	}
 }
 @media all and (min-width: 800px) {
 	html {
-		background: url(/images/hexagonal-background_w800xh3189.jpg) no-repeat
-			center fixed;
+		height: 100%;
+		background-image: url(/images/hexagonal-background_w1600xh3200.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 		background-size: cover;
+	}
+
+	header {
+		align-items: flex-start;
 	}
 
 	.jwst-image {
@@ -937,9 +1165,6 @@ footer {
 		width: 25%;
 	}
 
-	h2 {
-		font-size: 4rem;
-	}
 	div.col-3.newsalert-sign-up-block {
 		justify-content: right;
 		margin: 1.5rem 0 0 1.5rem;
@@ -951,6 +1176,10 @@ footer {
 		background: url(/images/header-image-webb_1520x407.jpg) no-repeat center;
 		min-height: 407px;
 	}
+	h2 {
+		font-size: 3.5rem;
+	}
+
 	#countdown li {
 		font-size: 1.8rem;
 		padding: 0 2rem 2rem;
