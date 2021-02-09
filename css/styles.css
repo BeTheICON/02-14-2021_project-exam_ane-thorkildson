@@ -191,8 +191,9 @@ form.newsalert-sign-up-form {
 	font-size: 0.8rem;
 }
 .form-error {
-	color: red;
 	display: none;
+	color: rgb(187, 3, 3);
+	font-size: 0.8rem;
 }
 input {
 	color: #6d6d6d;
@@ -245,22 +246,42 @@ div.col-3.newsalert-sign-up-block {
 	margin: 1.5rem auto 0;
 }
 
-.errorMessage {
-	border: 4px ridge rgb(233, 4, 4);
+.back-link-container {
+	width: 100%;
+	background: rgba(0, 0, 0, 1);
+	padding: 0.4rem 0 0.4rem 1rem;
+}
+.fas.fa-chevron-left {
+	color: #fce09d;
+	padding-right: 0.4rem;
+}
+.back-link {
+	text-decoration-color: #fff;
+}
+.back-link h4:hover {
+	color: rgb(252, 224, 157);
+	text-decoration-color: rgba(252, 224, 157, 1);
+}
+.back-link h4:active {
+	color: rgba(255, 255, 255, 1);
+	text-decoration-color: rgba(255, 255, 255, 1);
+}
+
+.errorMessage,
+.validationErrorMessage {
+	border: 2px ridge rgb(233, 4, 4);
 	padding: 1.5rem;
 	margin: 2rem auto;
-	max-width: 600px;
+	max-width: 500px;
 	color: rgb(187, 3, 3);
-	background: rgb(187, 3, 3, 0.2);
 }
 
 .successMessage {
-	border: 4px ridge rgb(0, 185, 0);
+	border: 2px ridge rgb(0, 185, 0);
 	padding: 1.5rem;
 	margin: 2rem auto;
-	max-width: 600px;
+	max-width: 500px;
 	color: rgba(15, 128, 15);
-	background: rgba(15, 128, 15, 0.2);
 }
 
 /*------------------- Menu Menu Styles -------------------*/
@@ -505,6 +526,17 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 	display: flex;
 	flex-flow: column nowrap;
 }
+.details-result-container {
+	width: 95%;
+	background: rgba(40, 40, 42, 1);
+	min-height: 700px;
+	margin: 4rem auto;
+}
+img.details-thumbnail{
+	width: 100%;
+	min-height: 400px;
+	padding: 2rem;
+}
 
 ul.api-list-homepage {
 	list-style: none;
@@ -537,6 +569,7 @@ li.api-list-item-homepage {
 	margin-bottom: 1.5rem;
 	border: 0.5px ridge rgba(255, 255, 255, 0.5);
 }
+
 
 .text-block-container,
 .api-gallery-homepage,
@@ -849,7 +882,70 @@ footer {
 	color: rgba(40, 40, 42, 1);
 }
 .contact-us-header-text span {
+	text-shadow: 1px 1px 2px rgba(252, 224, 157, 0.5);
+}
+
+#contact-us-form .form-note,
+#contact-us-form .note,
+.far.fa-envelope,
+.far.fa-comment-dots {
+	color: rgba(19, 42, 126, 1);
 	text-shadow: 1px 1px 2px rgba(252, 224, 157, 0.1);
+	font-size: 0.9rem;
+}
+
+.contact-us-form-container {
+	max-width: 760px;
+	margin: 4rem auto 0;
+}
+
+#contact-us-form {
+	padding: 3rem 2rem;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+#contact-us-form input {
+	width: 100%;
+	margin-top: 2px;
+	padding: 10px;
+}
+
+#contact-us-form label {
+	display: block;
+	margin-top: 1rem;
+}
+
+#contact-us-form button {
+	background: url(/images/button\ blue\ 140x44.svg) no-repeat center;
+	border: none;
+	width: 200px;
+	padding: 0.8rem 2rem 2.4rem;
+	color: white;
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+.contact-us-form textarea {
+	width: 100%;
+	padding: 1rem;
+	line-height: 1.5;
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+}
+
+textarea#comment {
+	width: 100%;
+	min-height: 200px;
+	display: block;
+	padding: 1rem 2rem;
+	font-size: 1rem;
+}
+
+textarea:invalid {
+	border: 2px solid red;
+}
+textarea:invalid:required {
+	border: rgba(252, 224, 157, 1);
 }
 
 /*___________________________ end Contact us - styles _______________*/
@@ -1007,6 +1103,11 @@ footer {
 	.main-nav li a.current-page {
 		color: rgba(252, 224, 157, 1);
 	}
+
+	.back-link-container {
+		padding: 0.4rem 0 0.4rem 2rem;
+	}
+
 	footer {
 		background: url(/images/hexagonal-footer-banner-background_w1000xh300.jpg)
 			no-repeat center;
@@ -1170,6 +1271,11 @@ footer {
 		margin: 1.5rem 0 0 1.5rem;
 		width: 25%;
 	}
+	.back-link-container {
+		padding: 0.4rem 0 0.4rem 3rem;
+	}
+	.details-result-container {
+		width: 80%;
 }
 @media all and (min-width: 1200px) {
 	.jwst-image {

@@ -74,7 +74,39 @@
       </nav>
     <h6 class="contact-us-header-text">We would love to hear from you! <br> To get in touch with us, please fill in the contact form below, and we will get back to you ATSOL <br><span> - At The Speed Of Light - </span></h6>
         <section class="contact-page-background-image">
-            
+          <div class="contact-us-form-container">
+            <div id="successMessage"></div>
+            <form id="contact-us-form">
+                <div class="form-note">&#42Please note: All marked fields are required</div>
+                <div>
+                    <label>
+                        Name<span class="form-note">&#42</span> <span class="note">(First and last name)</span>
+                        <input name="name" id="name"/>
+                    </label>
+                    <div class="form-error" id="nameError">Please enter your first and last name</div>
+                </div>
+                <div>
+                  <label>
+                    Email <span><i class="far fa-envelope" aria-label="hidden"></i></span><span class="form-note">&#42</span>
+                      <input name="email" id="email"/>
+                  </label>
+                  <div class="form-error" id="emailError">Please make sure you have entered a valid email addresss</div>
+                </div>
+                <div>
+                    <label>
+                        Subject<span class="form-note">&#42</span>  <span class="note">(Minimum 10 characters)</span>
+                        <input name="subject" id="subject"/>
+                    </label>
+                    <div class="form-error" id="subjectError">Please make sure the subject name is at least 10 characters</div>
+                </div>
+                <div>
+                  <label for="comment"><span><i class="far fa-comment-dots" aria-label="hidden"></i></span> Please write your comment below&#58;<span class="form-note">&#42</span></label>
+                      <textarea id="comment" name="textareaComment" type="text" rows="5" cols="33" minLength="80" maxlength="240" placeholder="Please write your comment here..." required/>
+                      </textarea>
+                </div>
+                <button style="submit" aria-label="submit contact form button">Send contact form</button>
+            </form>
+          </div>
         </section>
         <div class="hr-line">
           <hr>
@@ -127,7 +159,7 @@
           </div>
         </footer>
         <script src="js/components/errorMessage.js"></script>
-        <script src="/js/jwst-gallery-script.js"></script>
-        <script src="/js/script.js"></script>
+        <script src="/js/jwst-contact-us-script.js"></script>
+        <src src="/js/script.js"></src>
     </body>
 </html>
