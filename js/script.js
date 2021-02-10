@@ -1,8 +1,8 @@
-const apiResultsHomepage = document.querySelector(
-	".api-results-container-homepage"
-);
+const apiResultsHomepage = document.querySelector(".api-results-container-homepage");
+
 const url =
 	"https://images-api.nasa.gov/search?q=webb&keywords=webb,jwst?api_key=C7eDacgnY1X1gtW85L1Eg6FmnzGQIz6qVG9KchOZ";
+
 
 async function fetchWebbNews() {
 	try {
@@ -23,8 +23,8 @@ async function fetchWebbNews() {
                 <img class="api-list-item-homepage-thumbnail" src="${webbCollection[i].links[0].href}" alt="${webbCollection[i].data[0].title}">
                 <h4>${webbCollection[i].data[0].title}</h4>
                 <div class="view-more-button-container">
-                <a href="${webbCollection[i].data[0].title}"><span>
-                <button class="view-more-button" type="button" aria-label="view more button">View more</button>
+                <a href="jwst-details.html?id=${webbCollection[i].data[0].nasa_id}"><span>
+                	<button class="view-more-button" type="button" aria-label="view more button">View more</button>
                 </span></a>
                 </div>
             </li>

@@ -72,19 +72,20 @@ h5 {
 }
 h2 {
 	text-transform: uppercase;
-	font-size: 2.4rem;
+	font-size: 2.2rem;
 }
 h2 span {
 	text-transform: none;
 }
 h5 {
 	font-size: 1.2rem;
-	font-family: "Akrobat-Light", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+.details-meta-container {
 	font-family: "Akrobat-Light", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 a.go-to-link {
@@ -269,6 +270,7 @@ div.col-3.newsalert-sign-up-block {
 
 .errorMessage,
 .validationErrorMessage {
+	background: rgba(252, 252, 252, 1);
 	border: 2px ridge rgb(233, 4, 4);
 	padding: 1.5rem;
 	margin: 2rem auto;
@@ -277,6 +279,7 @@ div.col-3.newsalert-sign-up-block {
 }
 
 .successMessage {
+	background: rgba(252, 252, 252, 1);
 	border: 2px ridge rgb(0, 185, 0);
 	padding: 1.5rem;
 	margin: 2rem auto;
@@ -285,9 +288,34 @@ div.col-3.newsalert-sign-up-block {
 }
 
 /*------------------- Menu Menu Styles -------------------*/
+.nav-container {
+	width: 100%;
+	background: rgba(0, 0, 0, 1);
+	padding: 1rem 0 0.3rem 1rem;
+}
 
-.main-nav {
-	display: none;
+ul.main-nav {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+.main-nav li {
+	margin-right: 1.5rem;
+}
+.main-nav li a {
+	color: rgba(252, 252, 252, 1);
+}
+.main-nav li a:hover {
+	color: rgba(252, 224, 157, 1);
+	text-decoration: none;
+}
+.main-nav li a:active {
+	text-decoration: underline;
+}
+.main-nav li a.current-page {
+	color: rgba(252, 224, 157, 1);
 }
 
 #sidebarMenu {
@@ -529,13 +557,44 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .details-result-container {
 	width: 95%;
 	background: rgba(40, 40, 42, 1);
-	min-height: 700px;
-	margin: 4rem auto;
+	min-height: 500px;
+	margin: 3rem auto;
+	padding: 2rem 1rem;
 }
-img.details-thumbnail{
+.details-info-container h1 {
+	color: rgba(255, 255, 255, 1);
+}
+.details-meta-container {
+	margin: 1rem 0 2rem;
+	color: rgba(252, 224, 157, 0.6);
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	padding-left: 1rem;
+}
+p span {
+	text-decoration: underline;
+	padding-right: 0.3rem;
+	color: #fce09d;
+}
+.details-image-container {
 	width: 100%;
-	min-height: 400px;
-	padding: 2rem;
+	min-height: 150px;
+	margin-bottom: 2rem;
+}
+.details-image {
+	width: 100%;
+	height: auto;
+}
+
+.details-description-container {
+	background: rgba(252, 252, 252, 1);
+	padding: 1.5rem 1rem;
+	line-height: 1.6rem;
+	min-height: 150px;
+}
+.details-description-container p {
+	padding: 1rem 0 2rem;
+	text-indent: 2%;
 }
 
 ul.api-list-homepage {
@@ -569,7 +628,6 @@ li.api-list-item-homepage {
 	margin-bottom: 1.5rem;
 	border: 0.5px ridge rgba(255, 255, 255, 0.5);
 }
-
 
 .text-block-container,
 .api-gallery-homepage,
@@ -652,7 +710,7 @@ a.link-block-link:active {
 	position: absolute;
 	width: 4px;
 	height: 0%;
-	background: rgba(19, 42, 126, 1);
+	background: rgba(252, 224, 157, 1);
 	z-index: 999999;
 }
 
@@ -954,7 +1012,7 @@ textarea:invalid:required {
 
 @media all and (max-width: 280px) {
 	h2 {
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 	#countdown li {
 		font-size: 0.8rem;
@@ -1074,38 +1132,10 @@ textarea:invalid:required {
 		justify-content: space-around;
 		align-items: center;
 	}
-	.nav-container {
-		width: 100%;
-		background: rgba(0, 0, 0, 1);
-		padding: 0 0 0.3rem 1rem;
-	}
-
-	ul.main-nav {
-		list-style: none;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-content: flex-start;
-	}
-	.main-nav li {
-		margin-right: 1.5rem;
-	}
-	.main-nav li a {
-		color: rgba(252, 252, 252, 1);
-	}
-	.main-nav li a:hover {
-		color: rgba(252, 224, 157, 1);
-		text-decoration: none;
-	}
-	.main-nav li a:active {
-		text-decoration: underline;
-	}
-	.main-nav li a.current-page {
-		color: rgba(252, 224, 157, 1);
-	}
 
 	.back-link-container {
-		padding: 0.4rem 0 0.4rem 2rem;
+		padding: 0 0 0.4rem 1rem;
+		font-size: 1rem;
 	}
 
 	footer {
@@ -1176,6 +1206,22 @@ textarea:invalid:required {
 
 	.headerHamburgerMenu {
 		display: none;
+	}
+
+	.details-flex-wrap {
+		display: flex;
+		flex-flow: row-reverse wrap;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	.details-image-container {
+		width: 65%;
+	}
+	.details-info-container {
+		width: 30%;
+	}
+	.details-result-container {
+		padding: 2.5rem;
 	}
 }
 @media all and (min-width: 800px) {
@@ -1276,6 +1322,7 @@ textarea:invalid:required {
 	}
 	.details-result-container {
 		width: 80%;
+	}
 }
 @media all and (min-width: 1200px) {
 	.jwst-image {

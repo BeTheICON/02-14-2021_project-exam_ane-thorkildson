@@ -1,32 +1,29 @@
-const mediaItemId = document.querySelector(".id")
-
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-
 const detailsResult = document.querySelector(".details-result-container");
 
-const url ="https://images-api.nasa.gov/search?q=NHQ_2018_0627?api_key=C7eDacgnY1X1gtW85L1Eg6FmnzGQIz6qVG9KchOZ";
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString); 
+console.log(params);
+const id = params.get("id");
+console.log(id);
+
+
+const url ="https://images-api.nasa.gov/search?q="+ id;
+
 
 
     async function fetchWebbMediaItem() {
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		console.log(data);
+		const webbMediaItem = data.collection.items;
+		console.log(webbMediaItem);
 
-	/*	detailsResult.innerHTML = "";
+		detailsResult.innerHTML = "";
 
-		for (let i = 0; i < webbCollection.length; i++) {
-            console.log(webbCollection[i]);
+		createHTML(webbMediaItem);
 
-			detailsResult.innerHTML += `<img class="details-thumbnail" src="${webbCollection[i].links[0].href}" alt="${webbCollection[i].data[0].title}">
-                <div class="details-info-container>
-                    <h4>${webbCollection[i].data[0].title}</h4>
+		document.title = `${webbMediaItem[0].data[0].title}`;
 
-                
-                </div>`;
-		}*/
 	} catch (error) {
 		console.log("error occured");
 		detailsResult.innerHTML = errorMessage();
@@ -36,5 +33,23 @@ fetchWebbMediaItem();
 
 
 
+function createHTML(webbMediaItem) {
 
-
+        detailsResult.innerHTML = `<div class="details-flex-wrap">
+        <div class="details-image-container">
+            <img class="details-image" src="${webbMediaItem[0].links[0].href}" alt="${webbMediaItem[0].data[0].title}">
+        </div>
+        <div class="details-info-container">
+            <h1>${webbMediaItem[0].data[0].title}</h1>
+            <div class="details-meta-container">
+                <p class"details-meta"> Date created: ${webbMediaItem[0].data[0].date_created}</p>
+                <p class"details-meta"> Keywords: ${webbMediaItem[0].data[0].keywords}</p>
+                <p class"details-meta"> Science Facility: ${webbMediaItem[0].data[0].center}</p>
+            </div>
+        </div>
+    </div>
+    <div class="details-description-container">
+            <h6>About&#58;</h6>
+            <p class="details-description"> ${webbMediaItem[0].data[0].description}</p>
+    </div>`;
+}

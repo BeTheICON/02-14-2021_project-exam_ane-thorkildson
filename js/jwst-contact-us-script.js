@@ -6,8 +6,6 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
-const address = document.querySelector("#address");
-const addressError = document.querySelector("#addressError");
 const button = document.querySelector("button");
 const successMessage = document.querySelector("#successMessage");
 const validationErrorMessage = document.querySelector("#validationErrorMessage");
@@ -30,11 +28,6 @@ function validateContactForm(event) {
         subjectError.style.display = "block";
     }
 
-    if (checkLength(address.value,24)===true){
-        addressError.style.display = "none";
-    }else{
-        addressError.style.display = "block";
-    }
 
     if(validateEmail(email.value)===true) {
             emailError.style.display = "none";
@@ -51,7 +44,7 @@ validateContactForm();
 
 
 function checkIfValidationIsTrue() {
-    if((validateEmail(email.value)) && (checkLength(address.value,24)) && (checkLength(subject.value,9))){
+    if((validateEmail(email.value)) && (checkLength(subject.value,9))){
         successMessage.innerHTML = '<div class="successMessage">The contact form has been sent</div>';
         contactForm.reset();
     }else{
