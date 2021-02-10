@@ -590,7 +590,7 @@ p span {
 	background: rgba(252, 252, 252, 1);
 	padding: 1.5rem 1rem;
 	line-height: 1.6rem;
-	min-height: 150px;
+	min-height: 100px;
 }
 .details-description-container p {
 	padding: 1rem 0 2rem;

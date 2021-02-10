@@ -42,9 +42,9 @@ function createHTML(webbMediaItem) {
         <div class="details-info-container">
             <h1>${webbMediaItem[0].data[0].title}</h1>
             <div class="details-meta-container">
-                <p class"details-meta"> Date created: ${webbMediaItem[0].data[0].date_created}</p>
-                <p class"details-meta"> Keywords: ${webbMediaItem[0].data[0].keywords}</p>
-                <p class"details-meta"> Science Facility: ${webbMediaItem[0].data[0].center}</p>
+                <p class"details-meta"> <span>Date created&#58;</span> ${webbMediaItem[0].data[0].date_created}</p>
+                <p class"details-meta"> <span>Keywords&#58;</span> ${webbMediaItem[0].data[0].keywords}</p>
+                <p class"details-meta"><span>Science Facility&#58;</span> ${webbMediaItem[0].data[0].center}</p>
             </div>
         </div>
     </div>
