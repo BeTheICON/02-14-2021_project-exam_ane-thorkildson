@@ -49,15 +49,14 @@
         </div>
         <div class="col-3 newsalert-sign-up-block">
           <h5 class="sign-up-title">Sign up for JWST Newsalerts</h5>
-          <div id="successMessage"></div>
           <form class="newsalert-sign-up-form">
             <div class="form-note">&#4Please register with your email-address
             </div>
             <div>
               <label><span class="form-note"></span>
-                <input name="email" id="email" placeholder="Email address"/>
+                <input name="email" class="email" placeholder="Email address"/>
               </label>
-              <div class="form-error" id="emailError">Please make sure you have entered a valid email addresss</div>
+              <div class="form-error" class="emailError">Please make sure you have entered a valid email addresss</div>
             </div>
             <button type="submit" class="submit-button" aria-label="sign-up confirmation button">
               <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up!</span>
@@ -130,15 +129,14 @@
           <div class="footer-flexbox">
             <div class="newsalert-sign-up-block">
               <h5 class="sign-up-title">Sign up for JWST Newsalerts</h5>
-              <div id="successMessage"></div>
               <form class="newsalert-sign-up-form">
                 <div class="form-note">&#4Please register with your email-address
                 </div>
                 <div>
                   <label><span class="form-note"></span>
-                    <input name="email" id="email" placeholder="Email address"/>
+                    <input name="email" class="email" placeholder="Email address"/>
                   </label>
-                  <div class="form-error" id="emailError">Please make sure you have entered a valid email addresss</div>
+                  <div class="form-error" class="emailError">Please make sure you have entered a valid email addresss</div>
                 </div>
                 <button type="submit" class="submit-button" aria-label="sign-up confirmation button">
                   <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up!</span>
@@ -153,6 +151,8 @@
           </div>
         </footer>
         <script src="js/components/errorMessage.js"></script>
+        <script src="js/components/signUpEmailValidation.js"></script>
+
         <script src="/js/jwst-details-script.js"></script>
     </body>
 </html>
