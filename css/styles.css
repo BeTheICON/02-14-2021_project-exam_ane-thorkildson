@@ -44,6 +44,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
+.sr-only {
+	display: none;
+}
 
 h1,
 h2,
@@ -181,10 +184,11 @@ header {
 	flex-direction: column;
 }
 
-form.newsalert-sign-up-form {
-	margin-top: 0.6rem;
+form.newsalert-sign-up-form form#newsalert-sign-up-form-three {
+	margin: 0.6rem auto 0;
 	width: 100%;
 	height: 140px;
+	max-width: 280px;
 }
 
 .form-note {
@@ -196,13 +200,11 @@ form.newsalert-sign-up-form {
 	color: rgb(187, 3, 3);
 	font-size: 0.8rem;
 }
-input .email {
+input {
 	color: #6d6d6d;
 	width: 100%;
-	margin-top: 2px;
-	padding: 10px;
 }
-input .email:focus {
+input .sign-up-email:focus {
 	color: rgba(40, 40, 42);
 }
 .fas.fa-check {
@@ -269,7 +271,7 @@ div.col-3.newsalert-sign-up-block {
 }
 
 .errorMessage,
-.emailError,
+.sign-up-emailError,
 .validationErrorMessage {
 	border: 4px ridge rgb(233, 4, 4);
 	color: rgb(187, 3, 3);
@@ -290,11 +292,10 @@ div.col-3.newsalert-sign-up-block {
 	color: rgb(2, 94, 29);
 }
 .form-success,
-.emailError {
-	display: none;
+.sign-up-emailError {
 	background: rgba(252, 252, 252, 1);
-	padding: 0.5rem 1rem;
-	margin: 0.5rem auto;
+	padding: 0.5rem;
+	margin: 0.5rem auto 0;
 	width: 100%;
 	font-size: 0.9rem;
 }
@@ -888,13 +889,16 @@ footer {
 	padding: 2rem 2rem 0.5rem;
 	text-align: center;
 }
+div.footer-flexbox {
+	margin: 0 auto;
+}
 
 .back-to-top {
-	margin: 0 auto 4rem;
+	margin: 0 auto 3rem;
 	width: 100%;
 }
 .back-to-top h4 {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	text-decoration: underline;
 }
 
@@ -984,14 +988,21 @@ footer {
 	background: rgba(255, 255, 255, 0.8);
 }
 
-#contact-us-form input {
+#contact-us-form input,
+.newsalert-sign-up-form input {
 	width: 100%;
 	margin-top: 2px;
 	padding: 10px;
 }
+.newsalert-sign-up-form input {
+	max-width: 200px;
+}
 
-#contact-us-form label {
+#contact-us-form label,
+.newsalert-sign-up-form label {
 	display: block;
+}
+#contact-us-form label {
 	margin-top: 1rem;
 }
 
@@ -1046,12 +1057,12 @@ textarea:invalid:required {
 		padding-top: 0.5rem;
 	}
 	.back-to-top {
-		margin: 0 auto 2rem;
+		margin: 0 auto 1.5rem;
 		width: 100%;
 	}
 
 	.back-to-top h4 {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 	}
 
 	.col-copyright {
@@ -1122,7 +1133,7 @@ textarea:invalid:required {
 	}
 
 	.footer-flexbox {
-		width: 90%;
+		width: 95%;
 	}
 	.col-copyright {
 		margin-top: 1.5rem;
@@ -1130,14 +1141,6 @@ textarea:invalid:required {
 	.col-copyright p {
 		font-size: 0.7rem;
 		margin-top: 1rem;
-	}
-
-	.back-to-top {
-		margin: 0 auto 2rem;
-	}
-
-	.back-to-top h4 {
-		font-size: 1.1rem;
 	}
 }
 @media all and (min-width: 680px) {
@@ -1156,24 +1159,30 @@ textarea:invalid:required {
 	}
 
 	footer {
-		background: url(/images/hexagonal-footer-banner-background_w1000xh300.jpg)
-			no-repeat center;
-		width: 100%;
-		min-height: 300px;
-	}
-	.footer-flexbox {
-		display: flex;
-		flex-flow: row-reverse;
-		justify-content: space-between;
-		align-content: flex-end;
-		margin: 2rem auto 0;
+		position: relative;
 	}
 
-	footer.newsalert-sign-up-form {
-		max-width: 30%;
+	.footer-flexbox {
+		width: 85%;
+		display: flex;
+		flex-flow: row-reverse nowrap;
+		justify-content: space-between;
+		align-content: flex-end;
+		position: absolute;
+		bottom: 2rem;
 	}
-	.col-copyright {
-		width: 50%;
+
+	footer.newsalert-sign-up-block {
+		justify-content: right;
+		margin: 1.5rem 0 0 1.5rem;
+		width: 25%;
+	}
+	.back-to-top {
+		margin-bottom: 1.8rem;
+	}
+	footer.col-copyright {
+		width: 60%;
+		justify-content: left;
 		margin: 1rem 0 0;
 	}
 	.col-copyright p {
@@ -1277,15 +1286,19 @@ textarea:invalid:required {
 	}
 
 	footer {
+		background: url(/images/hexagonal-footer-banner-background_w1000xh300.jpg)
+			no-repeat center;
+		width: 100%;
+		min-height: 300px;
 		padding: 1rem 2rem;
 	}
 	.footer-flexbox {
-		width: 90%;
-		justify-content: space-between;
-		margin: 0 auto;
+		bottom: 1rem;
+		width: 95%;
 	}
 	.col-copyright {
-		margin: 2rem 0 0;
+		margin: 3rem 0 0;
+		max-width: 60%;
 	}
 }
 @media all and (min-width: 1000px) {
@@ -1303,13 +1316,8 @@ textarea:invalid:required {
 		background: url(/images/hexagonal-footer-banner-background_w1920xh300.jpg)
 			no-repeat center;
 	}
-	.footer-flexbox {
-		align-content: flex-end;
-		padding-top: 2rem;
-	}
+
 	.col-copyright {
-		width: 70%;
-		margin-top: 2rem;
 		font-size: 0.9rem;
 	}
 
@@ -1359,10 +1367,7 @@ textarea:invalid:required {
 	#countdown li span {
 		font-size: 7rem;
 	}
-	.footer-flexbox {
-		width: 90%;
-		margin: 0 auto;
-	}
+
 	.col-copyright p {
 		font-size: 1rem;
 	}

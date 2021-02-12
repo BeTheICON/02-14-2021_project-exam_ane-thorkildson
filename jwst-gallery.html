@@ -49,17 +49,18 @@
         </div>
         <div class="col-3 newsalert-sign-up-block">
           <h5 class="sign-up-title">Sign up for JWST Newsalerts</h5>
-          <form class="newsalert-sign-up-form">
-            <div class="form-note">&#4Please register with your email-address
-            </div>
+          <form id="newsalert-sign-up-form-one" class="newsalert-sign-up-form">
             <div>
-              <label><span class="form-note"></span>
-                <input name="email" class="email" placeholder="Email address"/>
+              <label><span class="form-note">&#4Please register with your email-address</span>
+                <input name="email" id="email-one" class="sign-up-email" placeholder="Email address"/>
               </label>
-              <div class="form-error" class="emailError">Please make sure you have entered a valid email addresss</div>
             </div>
-            <button type="submit" class="submit-button" aria-label="sign-up confirmation button">
-              <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up!</span>
+            <div id="email-error-one">
+            </div>
+            <div id="form-success-one">
+            </div>
+            <button type="submit" id="submit-button-one" class="submit-button" aria-label="sign-up confirmation button">
+              <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up&#33;</span>
             </button>
           </form>
         </div>
@@ -98,6 +99,23 @@
           </div>
           <button disabled="false" class="load-more-button" type="button" aria-label="load more results button">load more...</button>
         </section>
+        <div class="text-block-newsalert-sign-up-form">
+          <h5 class="sign-up-title">Sign up for JWST Newsalerts</h5>
+          <form id="newsalert-sign-up-form-two" class="newsalert-sign-up-form">
+            <div>
+              <label><span class="form-note">&#4Please register with your email-address</span>
+                <input name="email" id="email-two" class="sign-up-email" placeholder="Email address"/>
+              </label>
+            </div>
+            <div id="email-error-two">
+            </div>
+            <div id="form-success-two">
+            </div>
+            <button type="submit" id="submit-button-two" class="submit-button" aria-label="sign-up confirmation button">
+              <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up&#33;</span>
+            </button>
+          </form>
+        </div>
         <div class="hr-line">
           <hr>
         </div>
@@ -126,17 +144,18 @@
           <div class="footer-flexbox">
             <div class="newsalert-sign-up-block">
               <h5 class="sign-up-title">Sign up for JWST Newsalerts</h5>
-              <form class="newsalert-sign-up-form">
-                <div class="form-note">&#4Please register with your email-address
-                </div>
+              <form id="newsalert-sign-up-form-three" class="newsalert-sign-up-form">
                 <div>
-                  <label><span class="form-note"></span>
-                    <input name="email" class="email" placeholder="Email address"/>
+                  <label><span class="form-note">&#4Please register with your email-address</span>
+                    <input name="email" id="email-three" class="sign-up-email" placeholder="Email address"/>
                   </label>
-                  <div class="form-error" class="emailError">Please make sure you have entered a valid email addresss</div>
                 </div>
-                <button type="submit" class="submit-button" aria-label="sign-up confirmation button">
-                  <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up!</span>
+                <div id="email-error-three">
+                </div>
+                <div id="form-success-three">
+                </div>
+                <button type="submit" id="submit-button-three" class="submit-button" aria-label="sign-up confirmation button">
+                  <span><i class="fas fa-check" aria-hidden="true"></i> Sign me up&#33;</span>
                 </button>
               </form>
             </div>
@@ -147,8 +166,8 @@
             </div>
           </div>
         </footer>
-        <script src="js/components/errorMessage.js"></script>
-        <script src="js/components/signUpEmailValidation.js"></script>
+        <script src="/js/components/errorMessage.js"></script>
+        <script src="/js/signUpEmailValidation.js"></script>
         <script src="/js/jwst-gallery-script.js"></script>
     </body>
 </html>
