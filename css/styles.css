@@ -71,7 +71,7 @@ h6 {
 }
 h1,
 h3 {
-	font-size: 2rem;
+	font-size: 1.6rem;
 }
 
 h2,
@@ -81,7 +81,7 @@ h5 {
 }
 h2 {
 	text-transform: uppercase;
-	font-size: 2.2rem;
+	font-size: 1.8rem;
 }
 h2 span {
 	text-transform: none;
@@ -125,28 +125,27 @@ button {
 .submit-button {
 	background: url(/images/button\ gold\ 240x44.svg) no-repeat center;
 	width: 240px;
-	padding: 1.2rem 3rem 2.8rem;
+	padding: 1.4rem 3rem 2.6rem;
 }
 .view-more-button {
 	background: url(/images/button\ blue\ 140x44.svg) no-repeat center;
 	width: 140px;
 	color: #fff;
 	margin: 0.8rem auto 0;
-	padding: 0.8rem 2rem;
+	padding: 0.6rem 2rem;
 }
 .load-more-button {
 	background: url(/images/button\ blue\ 240x44.svg) no-repeat center;
-	width: 320px;
-	height: 44px;
 	color: #fff;
+}
+.load-more-button,
+.load-more-button:hover {
+	min-height: 44px;
 	margin: 1rem auto 2rem;
-	padding: 1.5rem 4rem 3rem;
+	padding: 1.3rem 0.5rem 3.2rem;
 }
 .load-more-button:hover {
 	background: url(/images/button\ gold\ 240x44.svg) no-repeat center;
-	width: 400px;
-	min-height: 44px;
-	padding: 1.5rem 4rem 3rem;
 	color: rgba(40, 40, 42, 1);
 	text-decoration: underline;
 }
@@ -182,7 +181,7 @@ header {
 	flex-direction: column;
 }
 
-form.newsalert-sign-up-form form#newsalert-sign-up-form-three {
+form.newsalert-sign-up-form {
 	margin: 0.6rem auto 0;
 	width: 100%;
 	height: 140px;
@@ -211,12 +210,8 @@ input .sign-up-email:focus {
 	margin-left: -0.6rem;
 }
 
-.col-logo a img {
-	height: auto;
-	width: 180px;
-}
 .col-logo {
-	width: 95%;
+	width: 100%;
 	align-self: flex-start;
 	display: flex;
 	flex-flow: row wrap;
@@ -224,8 +219,13 @@ input .sign-up-email:focus {
 }
 
 .col-logo-image-wrap {
-	width: 60%;
+	background: url(/images/James\ Webb\ Space\ Telescope_Logo_w185_h90_drop-shadow_white_outline.svg)
+		no-repeat center;
+	width: 100%;
+	min-width: 185px;
+	min-height: 90px;
 }
+
 .col-logo-menu-wrap {
 	width: 30%;
 	height: auto;
@@ -244,7 +244,7 @@ div.col-3.newsalert-sign-up-block {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin: 1.5rem auto 0;
+	margin: 2rem auto 0;
 }
 
 .back-link-container {
@@ -330,7 +330,7 @@ ul.main-nav {
 }
 
 #sidebarMenu {
-	height: 40%;
+	height: 50%;
 	position: absolute;
 	right: 0;
 	width: 200px;
@@ -339,8 +339,8 @@ ul.main-nav {
 	transition: transform 250ms ease-in-out;
 	background: linear-gradient(
 		180deg,
-		rgba(0, 0, 0, 1) 40%,
-		rgba(252, 224, 157, 1) 60%
+		rgba(252, 224, 157, 1) 40%,
+		rgba(252, 252, 252, 1) 60%
 	);
 }
 
@@ -352,30 +352,32 @@ ul.main-nav {
 
 .sidebarMenuInner li {
 	list-style: none;
-	color: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
 	padding: 1rem;
 	cursor: pointer;
-	border-bottom: 1px solid rgba(252, 252, 252, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .sidebarMenuInner li a {
-	color: rgba(252, 252, 252, 1);
+	color: rgba(0, 0, 0, 1);
 	cursor: pointer;
 	text-decoration: none;
 }
 .sidebarMenuInner li a:hover {
-	text-decoration: underline;
-	color: rgba(252, 224, 157, 1);
+	text-decoration: none;
+	color: rgba(19, 42, 126, 1);
 }
 .sidebarMenuInner li a:active {
 	text-decoration: underline;
-	color: rgba(252, 252, 252, 1);
+	text-decoration-color: #132a7e;
+	color: rgba(19, 42, 126, 1);
 }
 
 .sidebarMenuInner li:hover {
 	text-decoration: none;
-	border-bottom: 2px solid rgba(252, 252, 252, 1);
-	border-top: 1px solid rgba(252, 252, 252, 1);
+	border-bottom: 2px solid rgba(0, 0, 0, 1);
+	border-top: 1px solid rgba(0, 0, 0, 1);
 }
 .sidebarMenuInner li:active {
 	border: 2px solid rgba(252, 252, 252, 1);
@@ -401,8 +403,8 @@ input[type="checkbox"] {
 	cursor: pointer;
 	position: absolute;
 	z-index: 99;
-	top: 2rem;
-	right: 2rem;
+	top: 1rem;
+	right: 1rem;
 	height: 40px;
 	width: 40px;
 	display: inline-block;
@@ -885,7 +887,7 @@ a.link-block-link:active {
 /*------------------------- footer styles --------------------*/
 
 footer {
-	background: url(/images/hexagonal-footer-banner-background_w500xh520.jpg)
+	background: url(/images/hexagonal-footer-banner-background_w500xh1000.jpg)
 		no-repeat center;
 	width: 100%;
 	min-height: 520px;
@@ -1017,7 +1019,7 @@ div.footer-flexbox {
 	background: url(/images/button\ blue\ 140x44.svg) no-repeat center;
 	border: none;
 	width: 200px;
-	padding: 0.8rem 2rem 2.4rem;
+	padding: 0.6rem 2rem 2.6rem;
 	color: white;
 	margin-top: 2rem;
 	cursor: pointer;
@@ -1159,6 +1161,16 @@ textarea:invalid:required {
 		align-items: center;
 	}
 
+	.col-logo-image-wrap {
+		background: url(/images/James\ Webb\ Space\ Telescope_Logo_w250_h150_drop-shadow_white_outline.svg)
+			no-repeat center;
+		width: 100%;
+		min-height: 150px;
+	}
+	.col-logo {
+		margin-left: 1rem;
+	}
+
 	.back-link-container {
 		padding: 0 0 0.4rem 1rem;
 		font-size: 0.8rem;
@@ -1283,10 +1295,6 @@ textarea:invalid:required {
 		font-size: 5rem;
 	}
 
-	.col-logo a img {
-		height: auto;
-		width: 250px;
-	}
 	h2 {
 		font-size: 3.2rem;
 	}
@@ -1311,6 +1319,13 @@ textarea:invalid:required {
 	.jwst-image {
 		background: url(/images/header-image-webb_1200x321.jpg) no-repeat center;
 		min-height: 321px;
+	}
+
+	.col-logo-image-wrap {
+		background: url(/images/James\ Webb\ Space\ Telescope_Logo_w300_h185_drop-shadow_white_outline.svg)
+			no-repeat center;
+		width: 100%;
+		min-height: 185px;
 	}
 
 	header {

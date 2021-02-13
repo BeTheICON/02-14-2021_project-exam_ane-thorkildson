@@ -26,10 +26,20 @@ function validateSignUpForm(event) {
         hideButtonOne.style.display = "none";
         formSuccessOne.innerHTML = `<div class="form-success">Success&#33;<br>Thanks for signing up &#45; Remember to check your inbox for our confirmation email</div>
         </div>`;
-        signUpFormOne.reset();
+        setTimeout(function() {
+            formSuccessOne.style.display = "none";
+            hideButtonOne.style.display = "block";
+            signUpFormOne.reset();
+            document.location.reload();
+        }, 5000);
     }else{
         emailErrorOne.innerHTML = `<div class="sign-up-emailError">Please make sure you have entered a valid email address</div>
         </div>`;
+        setTimeout(function() {
+            emailErrorOne.style.display = "none";
+            signUpFormOne.reset();
+            document.location.reload();
+        }, 3000);
     }
 
     if(validateEmail(emailTwo.value)===true) {
@@ -37,10 +47,20 @@ function validateSignUpForm(event) {
         hideButtonTwo.style.display = "none";
         formSuccessTwo.innerHTML = `<div class="form-success">Success&#33;<br>Thanks for signing up &#45; Remember to check your inbox for our confirmation email</div>
         </div>`;
-        signUpFormTwo.reset();
+        setTimeout(function() {
+            formSuccessTwo.style.display = "none";
+            hideButtonTwo.style.display = "block";
+            signUpFormTwo.reset();
+            document.location.reload();
+        }, 5000);
     }else{
         emailErrorTwo.innerHTML = `<div class="sign-up-emailError">Please make sure you have entered a valid email address</div>
         </div>`;
+        setTimeout(function() {
+            emailErrorTwo.style.display = "none";
+            signUpFormTwo.reset();
+            document.location.reload();
+        }, 3000);
     }
 
     if(validateEmail(emailThree.value)===true) {
@@ -48,13 +68,23 @@ function validateSignUpForm(event) {
             hideButtonThree.style.display = "none";
             formSuccessThree.innerHTML = `<div class="form-success">Success&#33;<br>Thanks for signing up &#45; Remember to check your inbox for our confirmation email</div>
             </div>`;
-            signUpFormThree.reset();
+            setTimeout(function() {
+                formSuccessThree.style.display = "none";
+                hideButtonThree.style.display = "block";
+                signUpFormThree.reset();
+                document.location.reload();
+            }, 5000);
         }else{
             emailErrorThree.innerHTML = `<div class="sign-up-emailError">Please make sure you have entered a valid email address</div>
             </div>`;
+            setTimeout(function() {
+                emailErrorThree.style.display = "none";
+                signUpFormThree.reset();
+                document.location.reload();
+            }, 3000);
         }
-
 }
+
 
 
 function validateEmail(emailOne) {
