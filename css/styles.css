@@ -1,4 +1,4 @@
-@import url("https://02-14-2020_Project-Exam_AneThorkildson/fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
 
 @font-face {
 	font-family: "Akrobat-Light";
@@ -34,7 +34,7 @@
 
 html {
 	height: 100%;
-	background-image: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-background_w400xh3189.jpg);
+	background-image: url(/images/hexagonal-background_w400xh3189.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -116,22 +116,19 @@ button {
 }
 
 .submit-button {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ gold\ 240x44.svg)
-		no-repeat center;
+	background: url(/images/button\ gold\ 240x44.svg) no-repeat center;
 	width: 240px;
 	padding: 1.2rem 3rem 2.8rem;
 }
 .view-more-button {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ blue\ 140x44.svg)
-		no-repeat center;
+	background: url(/images/button\ blue\ 140x44.svg) no-repeat center;
 	width: 140px;
 	color: #fff;
 	margin: 0.8rem auto 0;
 	padding: 0.8rem 2rem;
 }
 .load-more-button {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ blue\ 240x44.svg)
-		no-repeat center;
+	background: url(/images/button\ blue\ 240x44.svg) no-repeat center;
 	width: 320px;
 	height: 44px;
 	color: #fff;
@@ -139,8 +136,7 @@ button {
 	padding: 1.5rem 4rem 3rem;
 }
 .load-more-button:hover {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ gold\ 240x44.svg)
-		no-repeat center;
+	background: url(/images/button\ gold\ 240x44.svg) no-repeat center;
 	width: 400px;
 	min-height: 44px;
 	padding: 1.5rem 4rem 3rem;
@@ -157,14 +153,12 @@ button {
 }
 
 .view-more-button:hover {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ white\ 140x44.svg)
-		no-repeat center;
+	background: url(/images/button\ white\ 140x44.svg) no-repeat center;
 	color: #28282a;
 }
 
 .submit-button:hover {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ blue\ 240x44.svg)
-		no-repeat center;
+	background: url(/images/button\ blue\ 240x44.svg) no-repeat center;
 	color: #fff;
 }
 
@@ -182,7 +176,7 @@ body {
 }
 
 header {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-header-banner-background_mobile_w800xh420.jpg)
+	background: url(/images/hexagonal-header-banner-background_mobile_w800xh420.jpg)
 		no-repeat center;
 	width: 100%;
 	min-height: 420px;
@@ -888,7 +882,7 @@ a.link-block-link:active {
 /*------------------------- footer styles --------------------*/
 
 footer {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-footer-banner-background_w500xh520.jpg)
+	background: url(/images/hexagonal-footer-banner-background_w500xh520.jpg)
 		no-repeat center;
 	width: 100%;
 	min-height: 520px;
@@ -934,8 +928,7 @@ div.footer-flexbox {
 /*----------------- JWST Gallery Styles -----------------------*/
 
 .jwst-image {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/header-image-webb_400x107.jpg)
-		no-repeat center;
+	background: url(/images/header-image-webb_400x107.jpg) no-repeat center;
 	min-height: 107px;
 	width: 100%;
 }
@@ -950,7 +943,7 @@ div.footer-flexbox {
 .contact-page-background-image {
 	height: 1014px;
 	width: 100%;
-	background-image: url(/02-14-2020_Project-Exam_AneThorkildson/images/contact-us_background-image_1920x1014.jpg);
+	background-image: url(/images/contact-us_background-image_1920x1014.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -1014,8 +1007,7 @@ div.footer-flexbox {
 }
 
 #contact-form-button {
-	background: url(/02-14-2020_Project-Exam_AneThorkildson/images/button\ blue\ 140x44.svg)
-		no-repeat center;
+	background: url(/images/button\ blue\ 140x44.svg) no-repeat center;
 	border: none;
 	width: 200px;
 	padding: 0.8rem 2rem 2.4rem;
@@ -1081,15 +1073,14 @@ textarea:invalid:required {
 @media all and (min-width: 400px) {
 	html {
 		height: 100%;
-		background-image: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-background_w800xh3189.jpg);
+		background-image: url(/images/hexagonal-background_w800xh3189.jpg);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
 	}
 
 	.jwst-image {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/header-image-webb_600x161.jpg)
-			no-repeat center;
+		background: url(/images/header-image-webb_600x161.jpg) no-repeat center;
 		min-height: 161px;
 	}
 	#countdown li {
@@ -1112,8 +1103,7 @@ textarea:invalid:required {
 }
 @media all and (min-width: 500px) {
 	.jwst-image {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/header-image-webb_800x214.jpg)
-			no-repeat center;
+		background: url(/images/header-image-webb_800x214.jpg) no-repeat center;
 		min-height: 214px;
 	}
 	#countdown li {
@@ -1136,7 +1126,7 @@ textarea:invalid:required {
 	}
 
 	footer {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-footer-banner-background_w800xh400.jpg)
+		background: url(/images/hexagonal-footer-banner-background_w800xh400.jpg)
 			no-repeat center;
 		width: 100%;
 		min-height: 400px;
@@ -1155,7 +1145,7 @@ textarea:invalid:required {
 }
 @media all and (min-width: 680px) {
 	header {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-header-banner-background_mobile_w1000xh300.jpg)
+		background: url(/images/hexagonal-header-banner-background_mobile_w1000xh300.jpg)
 			no-repeat center;
 		flex-flow: row nowrap;
 		min-height: 300px;
@@ -1263,7 +1253,7 @@ textarea:invalid:required {
 @media all and (min-width: 800px) {
 	html {
 		height: 100%;
-		background-image: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-background_w1600xh3200.jpg);
+		background-image: url(/images/hexagonal-background_w1600xh3200.jpg);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
@@ -1274,8 +1264,7 @@ textarea:invalid:required {
 	}
 
 	.jwst-image {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/header-image-webb_1000x268.jpg)
-			no-repeat center;
+		background: url(/images/header-image-webb_1000x268.jpg) no-repeat center;
 		min-height: 268px;
 	}
 
@@ -1297,7 +1286,7 @@ textarea:invalid:required {
 	}
 
 	footer {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-footer-banner-background_w1000xh300.jpg)
+		background: url(/images/hexagonal-footer-banner-background_w1000xh300.jpg)
 			no-repeat center;
 		width: 100%;
 		min-height: 300px;
@@ -1314,18 +1303,17 @@ textarea:invalid:required {
 }
 @media all and (min-width: 1000px) {
 	.jwst-image {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/header-image-webb_1200x321.jpg)
-			no-repeat center;
+		background: url(/images/header-image-webb_1200x321.jpg) no-repeat center;
 		min-height: 321px;
 	}
 
 	header {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-header-banner-background_w1920xh244.jpg)
+		background: url(/images/hexagonal-header-banner-background_w1920xh244.jpg)
 			no-repeat center;
 		min-height: 244px;
 	}
 	footer {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/hexagonal-footer-banner-background_w1920xh300.jpg)
+		background: url(/images/hexagonal-footer-banner-background_w1920xh300.jpg)
 			no-repeat center;
 	}
 
@@ -1363,8 +1351,7 @@ textarea:invalid:required {
 }
 @media all and (min-width: 1200px) {
 	.jwst-image {
-		background: url(/02-14-2020_Project-Exam_AneThorkildson/images/header-image-webb_1520x407.jpg)
-			no-repeat center;
+		background: url(/images/header-image-webb_1520x407.jpg) no-repeat center;
 		min-height: 407px;
 	}
 	h2 {
