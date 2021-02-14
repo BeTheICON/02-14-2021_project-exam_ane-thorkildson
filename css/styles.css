@@ -626,7 +626,7 @@ p span {
 .details-description-container {
 	background: rgba(252, 252, 252, 1);
 	border: 0.5px ridge rgba(0, 0, 0, 1);
-	padding: 1.5rem 1rem;
+	padding: 1.5rem;
 	line-height: 1.6rem;
 	min-height: 100px;
 }
@@ -703,7 +703,7 @@ a.link-block-link {
 	width: 100%;
 	max-width: 240px;
 	height: 25%;
-	padding: 0.5rem 0;
+	padding-top: 0.8rem;
 }
 
 a.link-block-link:hover {
@@ -1193,6 +1193,10 @@ textarea:invalid:required {
 	.back-link-container {
 		padding: 0 0 0.4rem 1rem;
 		font-size: 0.8rem;
+	}
+
+	.details-description-container {
+		padding: 2.5rem;
 	}
 
 	footer {
